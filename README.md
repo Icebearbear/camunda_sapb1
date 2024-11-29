@@ -38,3 +38,14 @@ If the project fails to run, check the following:
 2. The Zeebe Broker is accessible at `localhost:8080`, and the Zeebe Gateway is accessible at `localhost:26500`, or adjust the `application.properties` file to match your configuration.
 
 [the-guide]: https://docs.camunda.io/docs/guides/getting-started-java-spring
+
+
+## Integration with SAP B1 Service Layer
+
+### Setup
+1. create java keystore using the SAP SLD ca certificate using *keytool* command in cmd
+2. import into /resources
+3. refer to it in application.yml
+4. setup SSLContext for the RestTemplate Bean in config/CustomerRestTemplateConfiguration.java
+5. the SSL configuration in (4) will be consumed in B1SLController when using @Autowired for RestTemplate. SSLContext will automatically used when RestTemplate makes HTTP Request  
+6. exposed /login endpoint to get the sessionId that will be used as cookies at subsequent requests

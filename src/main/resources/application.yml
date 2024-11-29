@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: process_payments
+  trust:
+      store: "classpath:servicelayer.jks"
+      store-password: "12345678"
+server:
+  port: 8081
+camunda:
+  client:
+    mode: saas
+    auth:
+      client-id: Nnr-u3sSsQbnB235qn6zbrmM1634gyo3
+      client-secret: N-wHYmZmvYW2GwPe~JqSPddfA3tm23pCpMW3xNMkXDSxaDIo8QfHMeA05tUbhGZI
+    cluster-id: 02ed295a-0d87-41fe-b7af-d287755bf5e0
+    region: sin-1

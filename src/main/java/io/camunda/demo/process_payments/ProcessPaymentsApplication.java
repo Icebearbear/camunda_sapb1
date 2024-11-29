@@ -27,7 +27,7 @@ public class ProcessPaymentsApplication implements CommandLineRunner {
 
 	@Override
 	public void run(final String... args) {
-		var bpmnProcessId = "process-payments"; // or whatever the key is
+		var bpmnProcessId = "process-payments22"; // or whatever the key is
 		var event = zeebeClient.newCreateInstanceCommand()
 				.bpmnProcessId(bpmnProcessId)
 				.latestVersion()
