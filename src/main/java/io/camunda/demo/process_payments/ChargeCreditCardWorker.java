@@ -18,6 +18,8 @@ public class ChargeCreditCardWorker {
   public Map<String, Double> chargeCreditCard(@Variable(name = "totalWithTax") Double totalWithTax) {
     LOG.info("charging credit card: {}", totalWithTax);
 
-    return Map.of("amountCharged", totalWithTax);
+    Map<String, Double> result = Map.of("amountCharged", totalWithTax);
+    LOG.info("Job Completed, result: {}" , result);
+    return result;
   }
 }
